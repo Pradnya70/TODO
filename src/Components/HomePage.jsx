@@ -23,7 +23,8 @@ function HomePage() {
     });
   }
 
-   const setToLocalStorage = (userId,title,completed) =>{
+   const setToLocalStorage = (id,userId,title,completed) =>{
+    localStorage.setItem("id",id)
     localStorage.setItem("userId",userId)
     localStorage.setItem("title",title)
     localStorage.setItem("completed",completed)
@@ -38,7 +39,7 @@ function HomePage() {
     <div>
       <div className="d-flex justify-content-between m-2">
         <h2>READ TODO LIST</h2>
-        <Link to='/AddTask'><button type="button" class="btn btn-primary" >CREATE TODO</button></Link>
+        <Link to='/AddTask'><button type="button" class="btn btn-primary" >ADD TASKS</button></Link>
         
         
       </div>
@@ -67,7 +68,7 @@ function HomePage() {
                   </td>
                   <td>
                   <Link to='/editTaskPage' >
-                    <button className="btn-success" onClick={()=>setToLocalStorage(eachData.userId,eachData.title,eachData.completed)}> Edit </button>
+                    <button className="btn-success" onClick={()=>setToLocalStorage(eachData.id,eachData.userId,eachData.title,eachData.completed)}> Edit </button>
                     </Link>
                   </td>
                   <td>
