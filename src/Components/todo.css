@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+    padding: 40px;
+  }
+  
+  th {
+    height: 100%;
+  }
+
+  table, th, td {
+    border: 1px none;
+  }
+  td {
+    text-align: center;
+    height: 50px;
+  vertical-align: bottom
+  }
+  th, td {
+    padding: 15px;
+
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  h2{
+    align-items: center;
+    text-align: center;
+  }
+  button{
+    align-items: center;
+  }
